@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 
+import MetaHead from '@/components/Metahead';
 import Wrapper from '@/components/Wrapper';
 
 import { AppContextWrapper } from '@/context';
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<AppContextWrapper>
 			<Wrapper>
+				<MetaHead />
 				<Theme theme={appTheme.light} />
 				<Component {...pageProps} />
 			</Wrapper>
