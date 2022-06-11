@@ -44,12 +44,17 @@ export const AppContextWrapper: FC<{
 			: isDarkTheme
 			? 'dark'
 			: 'light';
+
 		setTheme(currentTheme);
 	};
 
 	useEffect(() => {
 		updateInitialTheme();
 	}, []);
+
+	useEffect(() => {
+		applyTheme(appTheme[theme]);
+	}, [theme]);
 
 	return (
 		<AppContext.Provider

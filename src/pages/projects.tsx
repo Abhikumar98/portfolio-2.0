@@ -4,7 +4,7 @@ import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
 	return (
-		<div className="space-y-12">
+		<div className="md:space-y-12">
 			<ProjectCard
 				title="Dakiya"
 				url="https://dakiya.xyz"
