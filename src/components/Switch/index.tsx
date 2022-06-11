@@ -8,20 +8,14 @@ import React from 'react';
 const Switch: React.FC<ISwitch> = ({ enabled, onChange }) => {
 	return (
 		<div className="flex flex-col items-center sm:flex-row sm:justify-center sm:space-x-5">
-			<div className="relative mt-5 flex self-center rounded-lg border border-gray-200 bg-white p-1.5 shadow sm:mt-0">
+			{enabled ? (
 				<button
 					type="button"
 					onClick={() => onChange(false)}
-					className={`relative ml-0.5 whitespace-nowrap rounded-lg border border-transparent py-1 px-3 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none focus:ring-0 ${
-						enabled === false
-							? 'border-indigo-600 bg-indigo-600'
-							: ''
-					}`}
+					className="relative ml-0.5 whitespace-nowrap rounded-lg border border-transparent py-1 px-3 text-sm font-medium text-primary focus:z-10 focus:outline-none focus:ring-0"
 				>
 					<svg
-						className={`h-5 w-5 ${
-							enabled === false ? 'text-white' : 'text-gray-700'
-						}`}
+						className="h-7 w-7"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
 						fill="currentColor"
@@ -29,20 +23,14 @@ const Switch: React.FC<ISwitch> = ({ enabled, onChange }) => {
 						<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
 					</svg>
 				</button>
-
+			) : (
 				<button
 					type="button"
 					onClick={() => onChange(true)}
-					className={`relative whitespace-nowrap rounded-lg py-1.5 px-3 text-sm font-medium text-white shadow-sm focus:z-10 focus:outline-none focus:ring-0 ${
-						enabled === true
-							? 'border-indigo-600 bg-indigo-600'
-							: ''
-					}`}
+					className={` relative whitespace-nowrap rounded-lg py-1.5 px-3 text-sm focus:ring-0`}
 				>
 					<svg
-						className={`h-5 w-5 ${
-							enabled === true ? 'text-white' : 'text-gray-700'
-						}`}
+						className="h-7 w-7"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
 						fill="currentColor"
@@ -54,7 +42,7 @@ const Switch: React.FC<ISwitch> = ({ enabled, onChange }) => {
 						/>
 					</svg>
 				</button>
-			</div>
+			)}
 		</div>
 	);
 };

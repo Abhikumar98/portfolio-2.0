@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<AppContextWrapper>
 			<Wrapper>
 				<Theme theme={appTheme.light} />
-				<Component {...pageProps} />;
+				<Component {...pageProps} />
 			</Wrapper>
 		</AppContextWrapper>
 	);

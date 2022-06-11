@@ -47,17 +47,20 @@ const App = () => {
 	const isDarkMode = theme === 'dark';
 
 	return (
-		<div className="mx-none font-title h-screen w-screen overflow-y-auto p-12 pt-6 text-primary sm:p-14 sm:p-7 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
+		<div className="">
 			<div className="mb-6"></div>
 			<div className="mb-6">
-				<Heading>Hola 👋</Heading>
+				<Heading>Hello 👋</Heading>
 				<Subheading>{`I'm Abhishek kumar`}</Subheading>
 			</div>
 			<Subheading>
 				Frontend Web Developer, currently located in Bangalore, India
 				(GMT +5:30).
+			</Subheading>
+			<Subheading>
+				Currently,
 				<div>
-					Developer at{' '}
+					Frontend Developer @{' '}
 					<Link url="https://zomentum.com">Zomentum</Link>
 				</div>
 			</Subheading>
@@ -67,59 +70,66 @@ const App = () => {
 					abhishekkumar35962@gmail.com
 				</Link>
 			</Subheading>
-
-			<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">
-				<div>
-					<Link hideUnderline url="https://github.com/Abhikumar98">
-						<Image
-							alt="Github"
-							width={24}
-							height={24}
-							src={
-								isDarkMode
-									? '/svg/githubdark.svg'
-									: '/svg/github.svg'
-							}
-						/>
-					</Link>
-				</div>
-				<div>
-					<Link
-						hideUnderline
-						url="https://www.linkedin.com/in/abhishekkumar98/"
-					>
-						<Image
-							alt="LinkedIn"
-							width={24}
-							height={24}
-							src="/svg/linkedin.svg"
-						/>
-					</Link>
-				</div>
-				<div>
-					<Link hideUnderline url="https://twitter.com/abhikumar_98">
-						<Image
-							alt="Twitter"
-							width={24}
-							height={24}
-							src="/svg/twitter.svg"
-						/>
-					</Link>
-				</div>
-				<div>
-					<Link
-						hideUnderline
-						url="https://www.producthunt.com/@abhikumar98"
-					>
-						<Image
-							alt="ProductHunt"
-							width={24}
-							height={24}
-							src="/svg/producthunt.svg"
-						/>
-					</Link>
-				</div>
-			</footer>
+			<div className="my-12">
+				<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">
+					<div>
+						<Link
+							hideUnderline
+							url="https://github.com/Abhikumar98"
+						>
+							<Image
+								alt="Github"
+								width={24}
+								height={24}
+								src={
+									isDarkMode
+										? '/svg/githubdark.svg'
+										: '/svg/github.svg'
+								}
+							/>
+						</Link>
+					</div>
+					<div>
+						<Link
+							hideUnderline
+							url="https://www.linkedin.com/in/abhishekkumar98/"
+						>
+							<Image
+								alt="LinkedIn"
+								width={24}
+								height={24}
+								src="/svg/linkedin.svg"
+							/>
+						</Link>
+					</div>
+					<div>
+						<Link
+							hideUnderline
+							url="https://twitter.com/abhikumar_98"
+						>
+							<Image
+								alt="Twitter"
+								width={24}
+								height={24}
+								src="/svg/twitter.svg"
+							/>
+						</Link>
+					</div>
+					<div>
+						<Link
+							hideUnderline
+							url="https://www.producthunt.com/@abhikumar98"
+						>
+							<Image
+								alt="ProductHunt"
+								width={24}
+								height={24}
+								src="/svg/producthunt.svg"
+							/>
+						</Link>
+					</div>
+				</footer>
+			</div>
 		</div>
 	);
 };

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { FC, ReactNode } from 'react';
 
 import Switch from '@/components/Switch';
@@ -15,10 +16,22 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 		updateTheme('light');
 	};
 	return (
-		<div className=" overflow-auto bg-background text-primary">
-			<div className="flex items-center justify-center">
-				<div className="my-8 bg-transparent">Projects</div>
-				<Switch enabled={theme === 'dark'} onChange={updatePageTheme} />
+		<div className=" mx-none font-title h-screen w-screen overflow-auto overflow-y-auto bg-background p-12 pt-6 text-primary sm:p-14 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
+			<div className="flex w-full items-center justify-center">
+				<div className="my-8 flex w-full items-center justify-center">
+					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<Link href="/projects">Projects</Link>
+					</div>
+					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<Link href="/about">About me</Link>
+					</div>
+				</div>
+				<div className="ml-auo">
+					<Switch
+						enabled={theme === 'dark'}
+						onChange={updatePageTheme}
+					/>
+				</div>
 			</div>
 			{children}
 		</div>
