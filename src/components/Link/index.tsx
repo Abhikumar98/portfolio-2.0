@@ -13,7 +13,7 @@ const Link: FC<{
 			rel="noreferrer"
 			className={`${
 				!hideUnderline && 'link-underline'
-			} relative font-semibold ${className}`}
+			} relative  font-semibold text-primary opacity-80 hover:opacity-100 ${className}`}
 		>
 			{children}
 		</a>

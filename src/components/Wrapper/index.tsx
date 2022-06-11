@@ -16,24 +16,31 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 		updateTheme('light');
 	};
 	return (
-		<div className=" mx-none font-title h-screen w-screen overflow-auto overflow-y-auto bg-background p-12 pt-6 text-primary sm:p-14 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
-			<div className="flex w-full items-center justify-center">
-				<div className="my-8 flex w-full items-center justify-center">
-					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
-						<Link href="/projects">Projects</Link>
+		<div className="bg-background">
+			<div className="font-title m-auto min-h-screen w-screen max-w-5xl text-primary transition-all ease-in-out">
+				<div className="relative mx-24 flex items-center justify-end space-x-8 pt-6 md:pt-8 lg:pt-10 xl:pt-12">
+					<div className=" -ml-2 flex cursor-pointer items-center justify-center rounded-full border border-secondary p-3 text-xl font-bold">
+						<Link href="/">ak.</Link>
 					</div>
-					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+					<div className="my-8 flex w-full items-center justify-end">
+						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+							<Link href="/projects">Projects</Link>
+						</div>
+						{/* <div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/about">About me</Link>
+					</div> */}
+					</div>
+					<div className="ml-auo">
+						<Switch
+							enabled={theme === 'dark'}
+							onChange={updatePageTheme}
+						/>
 					</div>
 				</div>
-				<div className="ml-auo">
-					<Switch
-						enabled={theme === 'dark'}
-						onChange={updatePageTheme}
-					/>
+				<div className="w-full p-12 pt-6 sm:p-14 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
+					{children}
 				</div>
 			</div>
-			{children}
 		</div>
 	);
 };
