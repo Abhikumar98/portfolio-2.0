@@ -51,7 +51,7 @@ const App = () => {
 			<div className="mb-6"></div>
 			<div className="mb-6">
 				<Heading>Hola 👋</Heading>
-				<Subheading>I'm Abhishek kumar</Subheading>
+				<Subheading>{`I'm Abhishek kumar`}</Subheading>
 			</div>
 			<Subheading>
 				Frontend Web Developer, currently located in Bangalore, India
