@@ -2,7 +2,18 @@ import React from 'react';
 
 import ProjectCard from '@/components/ProjectCard';
 
-const Projects = () => {
+import { getNotionData } from '@/server';
+
+export const getStaticProps = async () => {
+	const response = await getNotionData();
+
+	return {
+		props: { response },
+	};
+};
+
+const Projects = ({ response }) => {
+	console.log({ response });
 	return (
 		<div className="md:space-y-12">
 			<ProjectCard
