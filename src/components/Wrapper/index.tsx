@@ -23,9 +23,9 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 						<Link href="/">ak.</Link>
 					</div>
 					<div className="my-8 hidden w-full items-center justify-end sm:flex">
-						{/* <div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 							<Link href="/projects">Projects</Link>
-						</div> */}
+						</div>
 						{/* <div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/about">About me</Link>
 					</div> */}
@@ -37,11 +37,11 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 						/>
 					</div>
 				</div>
-				{/* <div className="mr-8 mt-4 flex flex-col items-end space-y-4 sm:hidden">
+				<div className="mr-8 mt-4 flex flex-col items-end space-y-4 sm:hidden">
 					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/projects">Projects</Link>
 					</div>
-				</div> */}
+				</div>
 				<div className="w-full p-4 pt-6 sm:p-14 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
 					{children}
 				</div>
