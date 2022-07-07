@@ -3,7 +3,7 @@ import React from 'react';
 
 const MetaHead = () => {
 	const title = `Hello, I'm Abhishek`;
-	const description = 'Whut?';
+	const description = "Hello there 👋, I'm Abhishek";
 	const image =
 		'https://ik.imagekit.io/abhishekkumar/IMG_20181201_144641__1__1__1__sut-0wVmT.png';
 	const url = 'https://abhishekkumar.dev';
