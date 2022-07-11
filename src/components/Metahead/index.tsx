@@ -3,9 +3,9 @@ import React from 'react';
 
 const MetaHead = () => {
 	const title = `Hello, I'm Abhishek`;
-	const description = 'Whut?';
+	const description = "Hello there 👋, I'm Abhishek";
 	const image =
-		'https://ik.imagekit.io/abhishekkumar/IMG_20181201_144641__1__1__1__sut-0wVmT.png';
+		'https://ik.imagekit.io/abhishekkumar/p_k0qfv9hxT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1657173822150';
 	const url = 'https://abhishekkumar.dev';
 	return (
 		<Head>
