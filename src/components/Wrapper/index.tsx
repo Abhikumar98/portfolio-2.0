@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import React, { FC, ReactNode } from 'react';
 
@@ -26,6 +27,14 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 							<Link href="/projects">Projects</Link>
 						</div>
+						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+							<a href="/resume.pdf" target="_blank">
+								<span className="flex items-center">
+									Resume{' '}
+									<ExternalLinkIcon className="ml-2 h-4 w-4" />
+								</span>
+							</a>
+						</div>
 						{/* <div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/about">About me</Link>
 					</div> */}
@@ -40,6 +49,16 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 				<div className="mr-8 mt-4 flex flex-col items-end space-y-4 sm:hidden">
 					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/projects">Projects</Link>
+					</div>
+				</div>
+				<div className="mr-8 mt-4 flex flex-col items-end space-y-4 sm:hidden">
+					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<Link href="/resume.pdf">
+							<span className="flex items-center">
+								Resume{' '}
+								<ExternalLinkIcon className="ml-2 h-4 w-4" />
+							</span>
+						</Link>
 					</div>
 				</div>
 				<div className="w-full p-4 pt-6 sm:p-14 md:p-16 md:pt-8 lg:p-20 lg:pt-10 xl:p-24 xl:pt-12">
