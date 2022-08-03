@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import Heading from '@/components/Heading';
 import Link from '@/components/Link';
+import Paragraph from '@/components/Paragraph';
 import Subheading from '@/components/Subheading';
 
 import { useAppState } from '@/context';
@@ -49,27 +50,38 @@ const App = () => {
 	return (
 		<div className="">
 			<div className="mb-6"></div>
-			<div className="mb-6">
-				<Heading>Hello 👋</Heading>
-				<Subheading>{`I'm Abhishek kumar`}</Subheading>
+			<div className="flex justify-between">
+				<div>
+					<div className="mb-6">
+						<Heading>Hello 👋</Heading>
+						<Subheading>{`I'm Abhishek kumar`}</Subheading>
+					</div>
+					<Paragraph>
+						Frontend Web Developer based out of Bangalore.
+					</Paragraph>
+				</div>
+				<div>
+					<Image
+						src="/images/hero-image.png"
+						height={300}
+						width={300}
+						alt="Hero Image"
+					/>
+				</div>
 			</div>
 			<Subheading>
-				Frontend Web Developer, currently located in Bangalore, India
-				(GMT +5:30).
-			</Subheading>
-			<Subheading>
 				Currently,
-				<div>
+				<Paragraph>
 					Frontend Developer @{' '}
 					<Link url="https://zomentum.com">Zomentum</Link>
-				</div>
+				</Paragraph>
 			</Subheading>
-			<Subheading>
+			<Paragraph>
 				You can reach me at{' '}
 				<Link url="mailto:abhishekkumar35962@gmail.com?subject=Hey Abhishek, I was checking out your portfolio&body=👋 Hey, wanted to have a quick chat.">
 					abhishekkumar35962@gmail.com
 				</Link>
-			</Subheading>
+			</Paragraph>
 			<div className="my-12">
 				<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">
 					<div>

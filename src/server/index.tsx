@@ -27,6 +27,7 @@ export const getNotionData = async () => {
 		description: '',
 		url: '',
 		image: '',
+		product_hunt: '',
 	};
 
 	Object.entries(Object.values(page.collection)[0].value.schema).forEach(
@@ -40,6 +41,8 @@ export const getNotionData = async () => {
 	);
 
 	const formattedData: any[] = [];
+
+	console.log({ reverseProperties });
 
 	Object.values(page.block).forEach((block) => {
 		if (!block.value.properties) {
