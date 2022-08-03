@@ -9,6 +9,12 @@ const MetaHead = () => {
 	const url = 'https://abhishekkumar.dev';
 	return (
 		<Head>
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" />
+			<link
+				href="https://fonts.googleapis.com/css2?family=Merriweather&family=Palanquin&family=Work+Sans&display=swap"
+				rel="stylesheet"
+			/>
 			<link
 				rel="apple-touch-icon"
 				sizes="57x57"

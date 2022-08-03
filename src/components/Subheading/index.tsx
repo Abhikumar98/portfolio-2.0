@@ -7,9 +7,9 @@ const Subheading: React.FC<{
 }> = ({ children, className, level }) => {
 	return (
 		<h4
-			className={` mb-6 font-medium ${
-				level ? `text-${level}` : `secondary`
-			} ${className ?? ''} ${className}`}
+			className={` mb-6 font-secondary text-2xl font-medium ${
+				className ?? ''
+			} ${className}`}
 		>
 			{children}
 		</h4>

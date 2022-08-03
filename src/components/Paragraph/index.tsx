@@ -5,9 +5,11 @@ const Paragraph: React.FC<{
 	children: ReactNode;
 }> = ({ children, className }) => {
 	return (
-		<h4 className={` mb-4 font-normal text-secondary ${className}`}>
+		<div
+			className={` mb-4 font-paragraph text-lg text-secondary ${className}`}
+		>
 			{children}
-		</h4>
+		</div>
 	);
 };
 

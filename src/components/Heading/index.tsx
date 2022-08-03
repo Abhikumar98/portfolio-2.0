@@ -4,10 +4,10 @@ const Heading: React.FC<{
 	className?: string;
 	children: ReactNode;
 	level?: string;
-}> = ({ children, className, level }) => {
+}> = ({ children, className }) => {
 	return (
 		<h3
-			className={`mb-8 font-medium ${level ? `text-${level}` : ``} ${
+			className={`mb-8 font-primary text-4xl font-medium ${
 				className ?? ''
 			}`}
 		>

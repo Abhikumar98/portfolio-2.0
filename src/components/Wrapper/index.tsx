@@ -2,6 +2,7 @@ import { ExternalLinkIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 import React, { FC, ReactNode } from 'react';
 
+import Paragraph from '@/components/Paragraph';
 import Switch from '@/components/Switch';
 
 import { useAppState } from '@/context';
@@ -24,15 +25,17 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 						<Link href="/">ak.</Link>
 					</div>
 					<div className="my-8 hidden w-full items-center justify-end sm:flex">
-						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
-							<Link href="/projects">Projects</Link>
+						<div className="ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+							<Paragraph className="mb-0">
+								<Link href="/projects">Projects</Link>
+							</Paragraph>
 						</div>
-						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<div className="ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 							<a href="/resume.pdf" target="_blank">
-								<span className="flex items-center">
+								<Paragraph className="mb-0 flex items-center">
 									Resume{' '}
 									<ExternalLinkIcon className="ml-2 h-4 w-4" />
-								</span>
+								</Paragraph>
 							</a>
 						</div>
 						{/* <div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">

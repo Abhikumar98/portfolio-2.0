@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import Heading from '@/components/Heading';
 import Link from '@/components/Link';
+import Page from '@/components/Page';
 import Paragraph from '@/components/Paragraph';
 import Subheading from '@/components/Subheading';
 
@@ -50,32 +51,37 @@ const App = () => {
 	return (
 		<div className="">
 			<div className="mb-6"></div>
-			<div className="flex justify-between">
-				<div>
-					<div className="mb-6">
-						<Heading>Hello 👋</Heading>
-						<Subheading>{`I'm Abhishek kumar`}</Subheading>
+			<Page>
+				<div className="flex items-center justify-between space-x-12">
+					<div>
+						<div className="mb-6">
+							<Subheading>Hello 👋</Subheading>
+							<Heading level="4xl">{`I'm Abhishek kumar`}</Heading>
+						</div>
+						<Paragraph>
+							Frontend Web Developer based out of Bangalore,
+							solving one problem at a time with web
+						</Paragraph>
 					</div>
+					<div className="w-3/4">
+						<Image
+							src="/images/hero-image.png"
+							height={400}
+							width={400}
+							alt="Hero Image"
+						/>
+					</div>
+				</div>
+			</Page>
+			<Page>
+				<Subheading>
+					Currently,
 					<Paragraph>
-						Frontend Web Developer based out of Bangalore.
+						Frontend Developer @{' '}
+						<Link url="https://zomentum.com">Zomentum</Link>
 					</Paragraph>
-				</div>
-				<div>
-					<Image
-						src="/images/hero-image.png"
-						height={300}
-						width={300}
-						alt="Hero Image"
-					/>
-				</div>
-			</div>
-			<Subheading>
-				Currently,
-				<Paragraph>
-					Frontend Developer @{' '}
-					<Link url="https://zomentum.com">Zomentum</Link>
-				</Paragraph>
-			</Subheading>
+				</Subheading>
+			</Page>
 			<Paragraph>
 				You can reach me at{' '}
 				<Link url="mailto:abhishekkumar35962@gmail.com?subject=Hey Abhishek, I was checking out your portfolio&body=👋 Hey, wanted to have a quick chat.">

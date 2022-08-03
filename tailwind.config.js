@@ -16,7 +16,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Inter', ...fontFamily.sans],
+				primary: ['Merriweather'],
+				secondary: ['Work Sans'],
+				paragraph: ['Palanquin'],
 			},
 			colors: {
 				dark: '#222222',
