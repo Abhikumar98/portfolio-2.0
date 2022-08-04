@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import Heading from '@/components/Heading';
-import Link from '@/components/Link';
+import ExternalLink from '@/components/Link';
 import Page from '@/components/Page';
 import Paragraph from '@/components/Paragraph';
 import Subheading from '@/components/Subheading';
@@ -56,7 +56,7 @@ const App = () => {
 					<div>
 						<div className="mb-6">
 							<Subheading>Hello 👋</Subheading>
-							<Heading level="4xl">{`I'm Abhishek kumar`}</Heading>
+							<Heading level="4xl">{`I'm Abhishek Kumar`}</Heading>
 						</div>
 						<Paragraph>
 							Frontend Web Developer based out of Bangalore,
@@ -72,26 +72,9 @@ const App = () => {
 						/>
 					</div>
 				</div>
-			</Page>
-			<Page>
-				<Subheading>
-					Currently,
-					<Paragraph>
-						Frontend Developer @{' '}
-						<Link url="https://zomentum.com">Zomentum</Link>
-					</Paragraph>
-				</Subheading>
-			</Page>
-			<Paragraph>
-				You can reach me at{' '}
-				<Link url="mailto:abhishekkumar35962@gmail.com?subject=Hey Abhishek, I was checking out your portfolio&body=👋 Hey, wanted to have a quick chat.">
-					abhishekkumar35962@gmail.com
-				</Link>
-			</Paragraph>
-			<div className="my-12">
 				<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">
 					<div>
-						<Link
+						<ExternalLink
 							hideUnderline
 							url="https://github.com/Abhikumar98"
 						>
@@ -105,10 +88,10 @@ const App = () => {
 										: '/svg/github.svg'
 								}
 							/>
-						</Link>
+						</ExternalLink>
 					</div>
 					<div>
-						<Link
+						<ExternalLink
 							hideUnderline
 							url="https://www.linkedin.com/in/abhishekkumar98/"
 						>
@@ -118,10 +101,10 @@ const App = () => {
 								height={24}
 								src="/svg/linkedin.svg"
 							/>
-						</Link>
+						</ExternalLink>
 					</div>
 					<div>
-						<Link
+						<ExternalLink
 							hideUnderline
 							url="https://twitter.com/abhikumar_98"
 						>
@@ -131,10 +114,10 @@ const App = () => {
 								height={24}
 								src="/svg/twitter.svg"
 							/>
-						</Link>
+						</ExternalLink>
 					</div>
 					<div>
-						<Link
+						<ExternalLink
 							hideUnderline
 							url="https://www.producthunt.com/@abhikumar98"
 						>
@@ -144,10 +127,97 @@ const App = () => {
 								height={24}
 								src="/svg/producthunt.svg"
 							/>
-						</Link>
+						</ExternalLink>
 					</div>
 				</footer>
-			</div>
+			</Page>
+			<Page>
+				<Subheading>What am I upto?</Subheading>
+				<Heading>Web3</Heading>
+				<Paragraph className="">
+					Exploring blockchain and building as I learn.
+					<ExternalLink externalLink={false} url="/projects">
+						Check out my work
+					</ExternalLink>
+					<div className="">
+						Hanging @makerdock_ and @superteamdao
+					</div>
+				</Paragraph>
+			</Page>
+			<Page>
+				<Subheading>Work</Subheading>
+				<Heading>
+					Zomentum
+					<Paragraph>Sr. Frontend Engineer</Paragraph>
+				</Heading>
+			</Page>
+			<Heading>Send your hello 👋</Heading>
+			<Paragraph>
+				You can reach me at{' '}
+				<ExternalLink url="mailto:abhishekkumar35962@gmail.com?subject=Hey Abhishek, I was checking out your portfolio&body=👋 Hey, wanted to have a quick chat.">
+					abhishekkumar35962@gmail.com
+				</ExternalLink>
+			</Paragraph>
+			{/* <div className="my-12">
+				<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">
+					<div>
+						<ExternalLink
+							hideUnderline
+							url="https://github.com/Abhikumar98"
+						>
+							<Image
+								alt="Github"
+								width={24}
+								height={24}
+								src={
+									isDarkMode
+										? '/svg/githubdark.svg'
+										: '/svg/github.svg'
+								}
+							/>
+						</ExternalLink>
+					</div>
+					<div>
+						<ExternalLink
+							hideUnderline
+							url="https://www.linkedin.com/in/abhishekkumar98/"
+						>
+							<Image
+								alt="LinkedIn"
+								width={24}
+								height={24}
+								src="/svg/linkedin.svg"
+							/>
+						</ExternalLink>
+					</div>
+					<div>
+						<ExternalLink
+							hideUnderline
+							url="https://twitter.com/abhikumar_98"
+						>
+							<Image
+								alt="Twitter"
+								width={24}
+								height={24}
+								src="/svg/twitter.svg"
+							/>
+						</ExternalLink>
+					</div>
+					<div>
+						<ExternalLink
+							hideUnderline
+							url="https://www.producthunt.com/@abhikumar98"
+						>
+							<Image
+								alt="ProductHunt"
+								width={24}
+								height={24}
+								src="/svg/producthunt.svg"
+							/>
+						</ExternalLink>
+					</div>
+				</footer>
+			</div> */}
 		</div>
 	);
 };
