@@ -63,7 +63,7 @@ const App = () => {
 							solving one problem at a time with web
 						</Paragraph>
 					</div>
-					<div className="w-3/4">
+					<div className="hidden w-3/4 md:block">
 						<Image
 							src="/images/hero-image.png"
 							height={400}
