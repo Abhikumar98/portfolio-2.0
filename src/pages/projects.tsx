@@ -15,7 +15,7 @@ export const getStaticProps = async () => {
 
 const Projects = ({ response }: { response: IProjectCard[] }) => {
 	return (
-		<div className="md:space-y-12">
+		<div className="md:space-y-20">
 			{response.map((project, index) => (
 				<ProjectCard
 					key={index}
