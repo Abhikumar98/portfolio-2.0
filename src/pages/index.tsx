@@ -132,16 +132,32 @@ const App = () => {
 				</footer>
 			</Page>
 			<Page>
+				<Heading>About me</Heading>
+				<Paragraph className="">
+					Frontend dev exploring web3. Lorem ipsum dolor sit amet
+					consectetur adipisicing elit. Earum ad omnis quae nobis,
+					rerum aliquid ipsam magni delectus laborum culpa, accusamus
+					deleniti. Odit omnis ad quam quo voluptatum nobis quisquam?
+				</Paragraph>
+			</Page>
+			<Page>
 				<Subheading>What am I upto?</Subheading>
-				<Heading>Web3</Heading>
+				<Heading>Wandering in metaverse</Heading>
 				<Paragraph className="">
 					Exploring blockchain and building as I learn.
 					<ExternalLink externalLink={false} url="/projects">
 						Check out my work
 					</ExternalLink>
+					<br />
+					Shipping side projects
+					<br />
 					<div className="">
 						Hanging @makerdock_ and @superteamdao
 					</div>
+					Frontend dev exploring web3. Lorem ipsum dolor sit amet
+					consectetur adipisicing elit. Earum ad omnis quae nobis,
+					rerum aliquid ipsam magni delectus laborum culpa, accusamus
+					deleniti. Odit omnis ad quam quo voluptatum nobis quisquam?
 				</Paragraph>
 			</Page>
 			<Page>
