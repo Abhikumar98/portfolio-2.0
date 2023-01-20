@@ -30,7 +30,11 @@ export const Theme = ({ theme }: { theme: Partial<ITheme> }) => {
 	}
 	`;
 
-	return <style>{customTheme}</style>;
+	return (
+		<>
+			<style>{customTheme}</style>
+		</>
+	);
 };
 
 export const applyTheme = (theme: ITheme) => {

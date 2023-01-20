@@ -16,7 +16,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Inter', ...fontFamily.sans],
+				primary: ['Work Sans', ...fontFamily.sans],
 			},
 			colors: {
 				dark: '#222222',

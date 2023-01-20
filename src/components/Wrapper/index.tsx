@@ -28,6 +28,9 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 							<Link href="/projects">Projects</Link>
 						</div>
 						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+							<Link href="/about">About</Link>
+						</div>
+						<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 							<a href="/resume.pdf" target="_blank">
 								<span className="flex items-center">
 									Resume{' '}
