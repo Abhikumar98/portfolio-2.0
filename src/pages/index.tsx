@@ -19,7 +19,8 @@ const App = () => {
 					currently located in Bangalore, India (GMT +5:30).
 				</Subheading>
 				<Subheading>
-					Exploring blockchain and building on it.
+					Exploring blockchain and building products that improves
+					web3 ecosystem.
 				</Subheading>
 				<Footer />
 			</Framer.AppearFromTop>

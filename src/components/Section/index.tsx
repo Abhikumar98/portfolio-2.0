@@ -11,7 +11,7 @@ const Section: React.FC<{
 	return (
 		<Framer.AppearFromTop delay={1}>
 			<h3
-				className={`mb-8 text-2xl font-semibold ${
+				className={`mt-32 mb-8 text-2xl font-semibold ${
 					level ? `text-${level}` : ``
 				} ${className ?? ''}`}
 			>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Footer from '@/components/Footer';
 import Framer from '@/components/Framer';
 import Heading from '@/components/Heading';
 import Link from '@/components/Link';
@@ -39,10 +40,6 @@ const About = () => {
 					I love working on the infrastructure of projects, I even
 					moved a whole frontend repo to a monorepo in my last job, it
 					was lit! 🔥
-					<br />
-					<br />
-					I'm kind of an ambivert, but if we meet, don't be shy to
-					push me to be more outgoing.🙂
 				</Subheading>
 				<Subheading>
 					DIY is my thing, I love building and breaking stuff with
@@ -55,6 +52,17 @@ const About = () => {
 				</Subheading>
 			</Framer.AppearFromTop>
 
+			<Framer.AppearFromTop delay={1.5}>
+				<Section heading="My approach">
+					<Subheading>
+						Everything can be broken down to the simplest components
+						or atom.
+						<br />
+						In web development, it's a box or div.
+					</Subheading>
+				</Section>
+			</Framer.AppearFromTop>
+
 			<Section heading="Work history">
 				<Subheading>
 					Previously,
@@ -63,6 +71,10 @@ const About = () => {
 						<Link url="https://zomentum.com">Zomentum</Link>
 					</div>
 				</Subheading>
+			</Section>
+
+			<Section heading="Wanna chat about a possible collab?">
+				<Footer />
 			</Section>
 		</div>
 	);
