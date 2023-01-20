@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Footer from '@/components/Footer';
 import Framer from '@/components/Framer';
 import Heading from '@/components/Heading';
