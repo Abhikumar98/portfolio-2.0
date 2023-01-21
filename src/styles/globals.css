@@ -131,3 +131,8 @@
 .link-underline:hover::after {
 	@apply opacity-100;
 }
+
+.notion-page {
+	padding: 0 !important;
+	width: 100% !important;
+}

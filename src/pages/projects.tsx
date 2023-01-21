@@ -27,6 +27,10 @@ const Projects = ({ response }: { response: IProjectCard[] }) => {
 							url={project.url}
 							description={project.description}
 							image={project.image}
+							tech={project.tech}
+							producthunt={project.producthunt}
+							blockId={project.blockId}
+							trophy={project.trophy}
 						/>
 					</Framer.AppearFromLeft>
 				))}
