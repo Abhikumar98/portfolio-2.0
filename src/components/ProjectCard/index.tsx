@@ -1,4 +1,5 @@
-import { GlobeAltIcon } from '@heroicons/react/outline';
+import { ArrowRightIcon, GlobeAltIcon } from '@heroicons/react/outline';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 import { ArrowContainer, Popover } from 'react-tiny-popover';
@@ -123,7 +124,17 @@ const ProjectCard: React.FC<IProjectCard> = ({
 										</ArrowContainer>
 									)}
 								>
-									<div onClick={() => setIsPopoverOpen(true)}>
+									<motion.div
+										initial={{ scale: 1 }}
+										whileHover={{ scale: 1.2 }}
+										transition={{
+											type: 'spring',
+											stiffness: 260,
+											damping: 5,
+											duration: 0.2,
+										}}
+										onClick={() => setIsPopoverOpen(true)}
+									>
 										<svg
 											id={blockId}
 											xmlns="http://www.w3.org/2000/svg"
@@ -137,12 +148,17 @@ const ProjectCard: React.FC<IProjectCard> = ({
 												clipRule="evenodd"
 											/>
 										</svg>
-									</div>
+									</motion.div>
 								</Popover>
 							)}
 						</div>
 
-						<Link href={`/projects/${blockId}`}>Read more</Link>
+						<Link href={`/projects/${blockId}`}>
+							<div className="group flex cursor-pointer items-center space-x-2">
+								<span>Read more</span>
+								<ArrowRightIcon className="h-4 w-4 transition-all group-hover:translate-x-2" />
+							</div>
+						</Link>
 					</div>
 				</Framer.AppearFromBottom>
 			</div>
