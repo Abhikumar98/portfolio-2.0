@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
+const animationDuration = 0.3;
+
 const AppearFromTop: React.FC<{
 	children: React.ReactNode;
 	delay?: number;
@@ -16,7 +18,7 @@ const AppearFromTop: React.FC<{
 				opacity: 1,
 			}}
 			transition={{
-				duration: 0.5,
+				duration: animationDuration,
 				delay: delay ?? 0.5,
 			}}
 		>
@@ -27,7 +29,8 @@ const AppearFromTop: React.FC<{
 
 const AppearFromBottom: React.FC<{
 	children: React.ReactNode;
-}> = ({ children }) => {
+	delay?: number;
+}> = ({ children, delay }) => {
 	return (
 		<motion.div
 			initial={{
@@ -39,8 +42,54 @@ const AppearFromBottom: React.FC<{
 				opacity: 1,
 			}}
 			transition={{
-				duration: 0.5,
-				delay: 0.5,
+				duration: animationDuration,
+				delay: delay ?? 0.5,
+			}}
+		>
+			{children}
+		</motion.div>
+	);
+};
+const AppearFromLeft: React.FC<{
+	children: React.ReactNode;
+	delay?: number;
+}> = ({ children, delay }) => {
+	return (
+		<motion.div
+			initial={{
+				opacity: 0,
+				x: -20,
+			}}
+			animate={{
+				opacity: 1,
+				x: 0,
+			}}
+			transition={{
+				duration: animationDuration,
+				delay: delay ?? 0.5,
+			}}
+		>
+			{children}
+		</motion.div>
+	);
+};
+const AppearFromRight: React.FC<{
+	children: React.ReactNode;
+	delay?: number;
+}> = ({ children, delay }) => {
+	return (
+		<motion.div
+			initial={{
+				opacity: 0,
+				x: 20,
+			}}
+			animate={{
+				opacity: 1,
+				x: 0,
+			}}
+			transition={{
+				duration: animationDuration,
+				delay: delay ?? 0.5,
 			}}
 		>
 			{children}
@@ -51,6 +100,8 @@ const AppearFromBottom: React.FC<{
 const Framer = {
 	AppearFromTop,
 	AppearFromBottom,
+	AppearFromLeft,
+	AppearFromRight,
 };
 
 export default Framer;

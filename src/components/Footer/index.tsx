@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import Link from '@/components/Link';
-import Subheading from '@/components/Subheading';
+import Paragraph from '@/components/Paragraph';
 
 import { useAppState } from '@/context';
 
@@ -13,12 +13,12 @@ const Footer = () => {
 
 	return (
 		<>
-			<Subheading>
+			<Paragraph>
 				You can reach me at{' '}
 				<Link url="mailto:abhishekkumar35962@gmail.com?subject=Hey Abhishek, I was checking out your portfolio&body=👋 Hey, wanted to have a quick chat.">
 					abhishekkumar35962@gmail.com
 				</Link>
-			</Subheading>
+			</Paragraph>
 
 			<div className="my-12">
 				<footer className="my-4 flex items-center space-x-4 pb-4 sm:my-0 sm:pb-0">

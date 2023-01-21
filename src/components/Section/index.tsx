@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import Framer from '@/components/Framer';
+import Subheading from '@/components/Subheading';
 
 const Section: React.FC<{
 	heading?: string;
@@ -10,14 +11,10 @@ const Section: React.FC<{
 }> = ({ children, className, level, heading }) => {
 	return (
 		<Framer.AppearFromTop delay={1}>
-			<h3
-				className={`mt-32 mb-8 text-2xl font-semibold ${
-					level ? `text-${level}` : ``
-				} ${className ?? ''}`}
-			>
-				{heading}
-			</h3>
-			{children}
+			<div className="mt-24 inline-block">
+				<Subheading>{heading}</Subheading>
+				{children}
+			</div>
 		</Framer.AppearFromTop>
 	);
 };

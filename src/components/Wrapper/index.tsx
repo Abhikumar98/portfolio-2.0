@@ -107,6 +107,9 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
 						<Link href="/projects">Projects</Link>
 					</div>
+					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">
+						<Link href="/about">About</Link>
+					</div>
 				</div>
 				<div className="mr-8 mt-4 flex flex-col items-end space-y-4 sm:hidden">
 					<div className=" ml-8 cursor-pointer opacity-70 transition-all ease-in-out hover:opacity-100">

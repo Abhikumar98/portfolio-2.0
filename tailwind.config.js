@@ -25,6 +25,9 @@ module.exports = {
 				secondary: 'var(--secondaryColor)',
 				link: 'var(--link)',
 			},
+			fontSize: {
+				'2xl': '2rem',
+			},
 			keyframes: {
 				flicker: {
 					'0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {

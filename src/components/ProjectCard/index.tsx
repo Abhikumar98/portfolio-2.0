@@ -1,12 +1,15 @@
 import React from 'react';
 
-import Heading from '@/components/Heading';
+import Framer from '@/components/Framer';
+import Paragraph from '@/components/Paragraph';
+import Subheading from '@/components/Subheading';
 
 export interface IProjectCard {
 	readonly projectName: string;
 	readonly url: string;
 	readonly image: string;
 	readonly description: string;
+	readonly index: number;
 }
 
 const ProjectCard: React.FC<IProjectCard> = ({
@@ -14,6 +17,7 @@ const ProjectCard: React.FC<IProjectCard> = ({
 	url,
 	image,
 	description,
+	index,
 }) => {
 	return (
 		<a
@@ -24,11 +28,23 @@ const ProjectCard: React.FC<IProjectCard> = ({
 		>
 			<div className="mt-8 md:mt-0 md:mr-12">
 				<span className="inline-block text-2xl font-bold">
-					<Heading>{projectName}</Heading>
+					<Framer.AppearFromTop delay={index * 0.4}>
+						<Subheading noMargins>{projectName}</Subheading>
+					</Framer.AppearFromTop>
 				</span>
-				<div className="text-secondary">{description}</div>
+				<Framer.AppearFromBottom delay={index * 0.4}>
+					<Paragraph className="text-secondary">
+						{description}
+					</Paragraph>
+				</Framer.AppearFromBottom>
 			</div>
-			<img className="max-w-sm rounded-md" alt="Test Image" src={image} />
+			<Framer.AppearFromRight delay={index * 0.4}>
+				<img
+					className="max-w-sm rounded-md"
+					alt="Test Image"
+					src={image}
+				/>
+			</Framer.AppearFromRight>
 		</a>
 	);
 };

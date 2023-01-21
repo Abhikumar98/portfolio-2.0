@@ -2,7 +2,7 @@
 import Footer from '@/components/Footer';
 import Framer from '@/components/Framer';
 import Heading from '@/components/Heading';
-import Subheading from '@/components/Subheading';
+import Paragraph from '@/components/Paragraph';
 
 const App = () => {
 	return (
@@ -15,14 +15,14 @@ const App = () => {
 			</Heading>
 
 			<Framer.AppearFromTop delay={1}>
-				<Subheading>
+				<Paragraph>
 					I'm a Fullstack web developer with 3+ years of experience,
 					currently located in Bangalore, India (GMT +5:30).
-				</Subheading>
-				<Subheading>
+				</Paragraph>
+				<Paragraph>
 					Exploring blockchain and building products that improves
 					web3 ecosystem.
-				</Subheading>
+				</Paragraph>
 				<Footer />
 			</Framer.AppearFromTop>
 		</div>
