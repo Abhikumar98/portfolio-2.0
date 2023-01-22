@@ -77,7 +77,6 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 					<motion.div
 						initial={{
 							opacity: 0,
-							display: 'none',
 						}}
 						animate={{
 							opacity: 1,
@@ -85,7 +84,6 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 						}}
 						exit={{
 							opacity: 0,
-							display: 'none',
 						}}
 						className="font-title m-auto min-h-screen w-screen max-w-5xl text-primary transition-all ease-in-out"
 					>

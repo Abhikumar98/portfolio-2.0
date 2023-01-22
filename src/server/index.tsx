@@ -1,4 +1,4 @@
-import { NotionAPI } from 'notion-client';
+import { CollectionPropertySchemaMap, ExtendedRecordMap } from 'notion-types';
 
 export const defaultMapImageUrl = (image = '', block: any) => {
 	const url = new URL(
@@ -18,19 +18,18 @@ export const defaultMapImageUrl = (image = '', block: any) => {
 	return url.toString();
 };
 
-class ProjectData {
+export class ProjectData {
 	projectName = '';
 	description = '';
 	url = '';
 	image = '';
 	blockId = '';
 	tech = '';
+	producthunt = '';
+	trophy = '';
 }
 
-export const getNotionData = async () => {
-	const notion = new NotionAPI();
-	const page = await notion.getPage('94a940c66fac40a98a7eda9a93e74e90');
-
+export const getPageProperties = (schema: CollectionPropertySchemaMap) => {
 	const properties: Record<string, string> = {
 		projectName: '',
 		description: '',
@@ -39,26 +38,34 @@ export const getNotionData = async () => {
 		tech: '',
 	};
 
-	Object.entries(Object.values(page.collection)[0].value.schema).forEach(
-		([key, value]) => {
-			(properties as any)[value.name] = key;
-		}
-	);
+	Object.entries(schema).forEach(([key, value]) => {
+		properties[value.name] = key;
+	});
 
 	const reverseProperties = Object.fromEntries(
 		Object.entries(properties).map(([key, value]) => [value, key])
 	);
 
-	console.log(JSON.stringify(properties, null, 4));
+	return { reverseProperties };
+};
 
-	const formattedData: any[] = [];
+export const getNotionData = (
+	page: ExtendedRecordMap,
+	schema: CollectionPropertySchemaMap,
+	blockId?: string
+) => {
+	const { reverseProperties } = getPageProperties(schema);
 
-	Object.values(page.block).forEach((block) => {
+	const formattedData: ProjectData[] = [];
+
+	const allBlocks = blockId
+		? [page.block[blockId]]
+		: Object.values(page.block);
+
+	allBlocks.forEach((block) => {
 		if (!block.value.properties) {
 			return;
 		}
-
-		console.log({ block: block.value.id });
 
 		const data: ProjectData = Object.entries(block.value.properties).reduce(
 			(final, [key, value]) => {
@@ -85,7 +92,6 @@ export const getNotionData = async () => {
 		data.blockId = block.value.id;
 
 		if (data.url) {
-			console.log(JSON.stringify(data, null, 4));
 			formattedData.push(data);
 		}
 	});

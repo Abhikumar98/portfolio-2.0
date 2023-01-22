@@ -1,4 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
+import { NotionAPI } from 'notion-client';
 import React from 'react';
 
 import Framer from '@/components/Framer';
@@ -7,7 +8,13 @@ import ProjectCard, { IProjectCard } from '@/components/ProjectCard';
 import { getNotionData } from '@/server';
 
 export const getStaticProps = async () => {
-	const response = await getNotionData();
+	const notion = new NotionAPI();
+	const page = await notion.getPage('94a940c66fac40a98a7eda9a93e74e90');
+	const { collection } = page;
+	const [collectionSchema] = Object.values(collection);
+	const { schema } = collectionSchema.value;
+
+	const response = getNotionData(page, schema);
 
 	return {
 		props: { response },
