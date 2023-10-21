@@ -1,6 +1,5 @@
-import { ArrowRightIcon, GlobeAltIcon } from '@heroicons/react/outline';
+import { GlobeAltIcon } from '@heroicons/react/outline';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import React from 'react';
 import { ArrowContainer, Popover } from 'react-tiny-popover';
 
@@ -153,12 +152,12 @@ const ProjectCard: React.FC<IProjectCard> = ({
 							)}
 						</div>
 
-						<Link href={`/projects/${blockId}`}>
+						{/* <Link href={`/projects/${blockId}`}>
 							<div className="group flex cursor-pointer items-center space-x-2">
 								<span>Read more</span>
 								<ArrowRightIcon className="h-4 w-4 transition-all group-hover:translate-x-2" />
 							</div>
-						</Link>
+						</Link> */}
 					</div>
 				</Framer.AppearFromBottom>
 			</div>

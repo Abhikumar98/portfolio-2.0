@@ -36,7 +36,7 @@ const About = () => {
 					<br />
 					atm, diving into <b>web3</b> and building products that
 					improve web3 ecosystem.
-					<br />( started this journey with FOMO and now onto WAGMI )
+					<br />
 				</Paragraph>
 				<Paragraph>
 					I love working on the infrastructure of projects, I even
@@ -48,9 +48,8 @@ const About = () => {
 					ESP32 chips. I'm all about solving real-world problems, so
 					you'll see a bunch of projects I've worked on.🔧 <br />
 					<br />
-					Overall, I'm always looking for new challenges and
-					opportunities to improve my skills and make a difference in
-					the world.💪
+					Overall, always looking for new challenges and opportunities
+					to improve my skills and make a difference in the world.💪
 				</Paragraph>
 			</Framer.AppearFromTop>
 
@@ -58,9 +57,7 @@ const About = () => {
 				<Section heading="My approach">
 					<Paragraph>
 						Everything can be broken down to the simplest components
-						or atom.
-						<br />
-						In web development, it's a box or div.
+						or atom. In web development, it's a box or div.
 					</Paragraph>
 				</Section>
 			</Framer.AppearFromTop>
