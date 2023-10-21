@@ -27,7 +27,10 @@ const Projects = ({ response }: { response: IProjectCard[] }) => {
 		<div className="md:space-y-12">
 			<AnimatePresence>
 				{response.map((project, index) => (
-					<Framer.AppearFromLeft key={index} delay={index * 0.3}>
+					<Framer.AppearFromLeft
+						key={index}
+						delay={(index / 2) * 0.001}
+					>
 						<ProjectCard
 							index={index}
 							projectName={project.projectName}

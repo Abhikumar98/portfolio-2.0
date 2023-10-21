@@ -52,11 +52,11 @@ const ProjectCard: React.FC<IProjectCard> = ({
 		<div className="flex w-full flex-col-reverse rounded-md py-8 sm:justify-between md:-m-8 md:flex-row md:p-8">
 			<div className="mt-8 w-full md:mt-0 md:mr-12 md:w-1/2">
 				<span className="inline-block text-2xl font-bold">
-					<Framer.AppearFromTop delay={index * 0.4}>
+					<Framer.AppearFromTop delay={index * 0.03}>
 						<Subheading noMargins>{projectName}</Subheading>
 					</Framer.AppearFromTop>
 				</span>
-				<Framer.AppearFromBottom delay={index * 0.4}>
+				<Framer.AppearFromBottom delay={index * 0.03}>
 					<Paragraph className="text-secondary">
 						{description}
 					</Paragraph>
@@ -162,7 +162,7 @@ const ProjectCard: React.FC<IProjectCard> = ({
 					</div>
 				</Framer.AppearFromBottom>
 			</div>
-			<Framer.AppearFromRight delay={index * 0.4}>
+			<Framer.AppearFromRight delay={index * 0.03}>
 				<img
 					className="max-w-sm rounded-md"
 					alt="Test Image"

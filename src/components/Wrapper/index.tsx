@@ -102,7 +102,7 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 									<a href="/resume.pdf" target="_blank">
 										<span className="group flex items-center">
 											Resume{' '}
-											<ExternalLinkIcon className="ml-2 h-4 w-4 group-hover:animate-bounce" />
+											<ExternalLinkIcon className="ml-2 h-4 w-4" />
 										</span>
 									</a>
 								</div>

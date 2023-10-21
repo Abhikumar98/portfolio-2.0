@@ -67,6 +67,12 @@ const About = () => {
 
 			<Section heading="Work history">
 				<Paragraph>
+					<div>
+						Frontend Developer @{' '}
+						<Link url="https://li.fi">Li.Fi</Link>
+					</div>
+				</Paragraph>
+				<Paragraph>
 					Previously,
 					<div>
 						Senior Frontend Developer @{' '}
