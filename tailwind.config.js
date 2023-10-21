@@ -16,7 +16,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				primary: ['Inter', ...fontFamily.sans],
+				primary: ['Work Sans', ...fontFamily.sans],
 			},
 			colors: {
 				dark: '#222222',
@@ -24,6 +24,9 @@ module.exports = {
 				background: 'var(--backgroundColor)',
 				secondary: 'var(--secondaryColor)',
 				link: 'var(--link)',
+			},
+			fontSize: {
+				'2xl': '2rem',
 			},
 			keyframes: {
 				flicker: {

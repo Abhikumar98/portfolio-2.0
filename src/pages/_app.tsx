@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 
 import '@/styles/globals.css';
+import 'react-notion-x/src/styles.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
 

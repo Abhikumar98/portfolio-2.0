@@ -131,3 +131,21 @@
 .link-underline:hover::after {
 	@apply opacity-100;
 }
+
+.notion-page {
+	padding: 0 !important;
+	width: 100% !important;
+	color: var(--primaryColor) !important;
+	border-color: var(--primaryColor) !important;
+}
+
+.notion-bookmark,
+.notion-bookmark > div,
+.notion-bookmark-link-text {
+	color: var(--primaryColor) !important;
+	border-color: var(--primaryColor) !important;
+}
+
+.notion-text {
+	/* @apply text-primary; */
+}
