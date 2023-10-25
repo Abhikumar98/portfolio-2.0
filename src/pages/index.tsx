@@ -3,10 +3,16 @@ import Footer from '@/components/Footer';
 import Framer from '@/components/Framer';
 import Heading from '@/components/Heading';
 import Paragraph from '@/components/Paragraph';
+import Pipe from '@/components/Pipe';
 
 const App = () => {
 	return (
 		<div className="">
+			<div className="flex flex-wrap">
+				{[...Array(25)].map((_, i) => (
+					<Pipe index={i} key={i} />
+				))}
+			</div>
 			<Heading>
 				<Framer.AppearFromTop>
 					Hello 👋 <br />
@@ -25,6 +31,7 @@ const App = () => {
 				</Paragraph>
 				<Footer />
 			</Framer.AppearFromTop>
+			<Pipe index={123} />
 		</div>
 	);
 };
