@@ -40,16 +40,7 @@ const About = () => {
 				</Paragraph>
 				<Paragraph>
 					I love working on the infrastructure of projects, I even
-					moved a whole frontend repo to a monorepo in my last job, it
-					was lit! 🔥
-				</Paragraph>
-				<Paragraph>
-					DIY is my thing, I love building and breaking stuff with
-					ESP32 chips. I'm all about solving real-world problems, so
-					you'll see a bunch of projects I've worked on.🔧 <br />
-					<br />
-					Overall, always looking for new challenges and opportunities
-					to improve my skills and make a difference in the world.💪
+					moved a whole frontend repo to a monorepo in my previous job
 				</Paragraph>
 			</Framer.AppearFromTop>
 

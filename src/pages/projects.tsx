@@ -16,6 +16,11 @@ export const getStaticProps = async () => {
 
 	const response = getNotionData(page, schema);
 
+	// sort as prize, producthunt, nothing
+	response.sort((a, b) => {
+		return a.index - b.index;
+	});
+
 	return {
 		props: { response },
 		revalidate: 10,
