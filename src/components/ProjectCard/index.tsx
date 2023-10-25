@@ -1,5 +1,6 @@
 import { GlobeAltIcon } from '@heroicons/react/outline';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React from 'react';
 import { ArrowContainer, Popover } from 'react-tiny-popover';
 
@@ -162,7 +163,7 @@ const ProjectCard: React.FC<IProjectCard> = ({
 				</Framer.AppearFromBottom>
 			</div>
 			<Framer.AppearFromRight delay={index * 0.03}>
-				<img
+				<Image
 					className="max-w-sm rounded-md"
 					alt="Test Image"
 					src={image}
