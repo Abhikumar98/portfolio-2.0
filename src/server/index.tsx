@@ -27,6 +27,7 @@ export class ProjectData {
 	tech = '';
 	producthunt = '';
 	trophy = '';
+	index = 0;
 }
 
 export const getPageProperties = (schema: CollectionPropertySchemaMap) => {

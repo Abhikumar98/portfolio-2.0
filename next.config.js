@@ -31,4 +31,8 @@ module.exports = {
 
 		return config;
 	},
+
+	images: {
+		domains: ['www.notion.so'],
+	},
 };
